@@ -10,17 +10,15 @@ from uwxpy.service.generate_prompt_service import GeneratePromptService
 # アプリ初期化
 app.init_app(__file__, "logger.json", "unchain-aiaw.json")
 
-# AnalysisPromptServiceインスタンス生成
 aps = AnalysisPromptService(
-    persona_path="app/prompt/personas.json", 
-    analysis_template_path="app/prompt/analysis_prompt_templates.json"
+    persona_path="tests/prompt/personas.json", 
+    analysis_template_path="tests/prompt/analysis_prompt_templates.json"
 )
 
-# GeneratePromptServiceインスタンス生成
 gps = GeneratePromptService(
-    modes_path="app/prompt/modes.json", 
-    word_data_path="app/prompt/words_data.json", 
-    style_anchor_path="app/prompt/style_anchor.json"
+    modes_path="tests/prompt/modes.json", 
+    word_data_path="tests/prompt/words_data.json", 
+    style_anchor_path="tests/prompt/style_anchor.json"
 )
 
 # aiartworksインスタンス生成
@@ -30,7 +28,6 @@ aiartworks_client = AIArtworks(
 )
 
 try:
-    # payloadオーバーライド
     payload_override = {
         "model": GeminiClient.GeminiModel.GEMINI_3_0_PRO_IMAGE_PREVIEW.value,
         "aspect": GeminiClient.AspectRatio.WIDE.value,
@@ -49,10 +46,9 @@ try:
     # Persona画像取得
     source_image_path = aiartworks_client.analysis_psrv.personas[persona_key]["source_image"]
     
-    # 画像編集 + ツイート
     res = aiartworks_client.edit_image_and_tweet(
         source_file_path=source_image_path,
-        output_abs_path="app/gen_images",
+        output_abs_path="tests/gen_images",
         persona_key=persona_key,
         mode_key=random.choice(["chill","action"]),
         **payload_override

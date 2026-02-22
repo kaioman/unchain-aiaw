@@ -1,0 +1,13 @@
+{
+    "uwgen": {
+        "api_key": "xxxxx",
+        "endpoint": "xxxxx"
+    },
+    "x_api": {
+        "consumer_key": "xxx",
+        "consumer_secret": "xxx",
+        "access_token": "xxx",
+        "access_token_secret": "xxx"
+    },
+    "image_output_abs_path": "xxxxxxx"
+}

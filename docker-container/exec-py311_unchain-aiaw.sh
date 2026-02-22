@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # コンテナに入る
-sudo docker exec -it py311_flask bash
+sudo docker exec -it py311_unchain_aiaw bash

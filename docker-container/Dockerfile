@@ -20,10 +20,13 @@ WORKDIR /var/docker-service/unchain-aiaw
 
 # cron設定ファイル登録
 COPY unchain-aiaw.cron /etc/cron.d/unchain-aiaw
-RUN chmod 0644 /etc/cron.d/unchain-aiaw && crontab /etc/cron.d/unchain-aiaw
+RUN sed -i 's/\r$//' /etc/cron.d/unchain-aiaw && \
+    chmod 0644 /etc/cron.d/unchain-aiaw && \
+    crontab /etc/cron.d/unchain-aiaw
 
 # ログ出力用のファイルを作成
-RUN touch /var/log/unchain-aiaw.log
+RUN touch /var/log/unchain-aiaw.log /var/log/supervisord.log && \
+    chmod 0666 /var/log/unchain-aiaw.log /var/log/supervisord.log
 
 # supervisord設定ファイルを登録
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf

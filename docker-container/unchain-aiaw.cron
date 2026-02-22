@@ -1,1 +1,1 @@
-0 4-19 * * * /usr/local/bin/python /var/docker-service/unchain-aiaw/app/main.py >> /var/log/unchain-aiaw.log 2>&1
+0 4-19 * * * /var/docker-service/unchain-aiaw/env/bin/python /var/docker-service/unchain-aiaw/app/main.py >> /var/log/unchain-aiaw.log 2>&1

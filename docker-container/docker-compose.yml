@@ -11,6 +11,7 @@ services:
     volumes:
       - env_aibot:/var/docker-service/unchain-aiaw/env
       - ../unchain-aiaw:/var/docker-service/unchain-aiaw
+      - ../logs:/var/log
     environment:
       - PROJECT_ROOT=/var/docker-service/unchain-aiaw
     networks:

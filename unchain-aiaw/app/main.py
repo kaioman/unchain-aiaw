@@ -6,9 +6,13 @@ from pycorex.gemini_client import GeminiClient
 from uwxpy.core.aiartworks import AIArtworks
 from uwxpy.service.analysis_prompt_service import AnalysisPromptService
 from uwxpy.service.generate_prompt_service import GeneratePromptService
+from __init__ import __version__
 
 # アプリ初期化
 app.init_app(__file__, "logger.json", "unchain-aiaw.json")
+
+# 起動ログ出力
+app_logger.info(f"Starting unchain-aiaw service... Version: {__version__}")
 
 # AnalysisPromptServiceインスタンス生成
 aps = AnalysisPromptService(

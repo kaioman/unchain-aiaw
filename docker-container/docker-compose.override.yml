@@ -1,0 +1,4 @@
+services:
+  aibot:
+    ports:
+      - "5160:5160"

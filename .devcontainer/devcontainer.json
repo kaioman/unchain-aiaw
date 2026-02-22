@@ -1,0 +1,6 @@
+{
+    "name": "AIBot Service Dev Container",
+    "dockerComposeFile": ["../docker-container/docker-compose.yml"],
+    "service": "unchain-aiaw",
+    "workspaceFolder": "/var/docker-service/unchain-aiaw"
+}

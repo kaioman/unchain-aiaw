@@ -1,0 +1,22 @@
+name: aibot-service
+
+services:
+  aibot:
+    restart: always
+    build: .
+    container_name: py311_unchain_aiaw
+    ports:
+      - "5160:5160"
+    tty: true
+    volumes:
+      - env_aibot:/var/docker-service/unchain-aiaw/env
+      - ../unchain-aiaw:/var/docker-service/unchain-aiaw
+    environment:
+      - PROJECT_ROOT=/var/docker-service/unchain-aiaw
+    networks:
+      - docker-container_default
+volumes:
+  env_aibot:
+networks:
+  docker-container_default:
+    external: true

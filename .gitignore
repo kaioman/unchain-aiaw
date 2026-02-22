@@ -1,6 +1,7 @@
 .env
 env/
 logs/
+unchain-aiaw-dev.json
 unchain-aiaw.json
 gen_images
 __pycache__

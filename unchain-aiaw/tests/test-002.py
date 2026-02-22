@@ -1,10 +1,11 @@
+import os
 import uwxpy.configs.app_init as app
 import libcore_hng.utils.app_logger as app_logger
 from pycorex.gemini_client import GeminiClient
 from uwxpy.core.aiartworks import AIArtworks
 
 # アプリ初期化
-app.init_app(__file__, "logger.json", "unchain-aiaw.json")
+app.init_app(__file__, "logger.json", os.environ.get('CONFIG_FILE_NAME', 'unchain-aiaw-dev.json'))
 
 # aiartworksインスタンス生成
 aiartworks_client = AIArtworks()

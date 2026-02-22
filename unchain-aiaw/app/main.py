@@ -1,3 +1,4 @@
+import os
 import random
 import uwxpy.configs.app_init as app
 import libcore_hng.utils.app_logger as app_logger
@@ -9,7 +10,7 @@ from uwxpy.service.generate_prompt_service import GeneratePromptService
 from __init__ import __version__
 
 # アプリ初期化
-app.init_app(__file__, "logger.json", "unchain-aiaw.json")
+app.init_app(__file__, "logger.json", os.environ.get('CONFIG_FILE_NAME', 'unchain-aiaw-dev.json'))
 
 # 起動ログ出力
 app_logger.info(f"Starting unchain-aiaw service... Version: {__version__}")

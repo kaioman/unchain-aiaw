@@ -5,7 +5,7 @@ if not os.environ.get('PROJECT_ROOT'):
     os.environ["PROJECT_ROOT"] = "E:\\Dev\\034 unchain-aiaw\\unchain-aiaw\\unchain-aiaw"
 
 # アプリ初期化
-app.init_app(__file__, "logger.json", "unchain-aiaw.json")
+app.init_app(__file__, "logger.json", os.environ.get('CONFIG_FILE_NAME', 'unchain-aiaw-dev.json'))
 
 # 設定確認
 print(app.core.config.uwgen.api_key)

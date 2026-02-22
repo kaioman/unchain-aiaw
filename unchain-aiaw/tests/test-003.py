@@ -1,3 +1,4 @@
+import os
 import random
 import uwxpy.configs.app_init as app
 import libcore_hng.utils.app_logger as app_logger
@@ -8,7 +9,7 @@ from uwxpy.service.analysis_prompt_service import AnalysisPromptService
 from uwxpy.service.generate_prompt_service import GeneratePromptService
 
 # アプリ初期化
-app.init_app(__file__, "logger.json", "unchain-aiaw.json")
+app.init_app(__file__, "logger.json", os.environ.get('CONFIG_FILE_NAME', 'unchain-aiaw-dev.json'))
 
 aps = AnalysisPromptService(
     persona_path="tests/prompt/personas.json", 

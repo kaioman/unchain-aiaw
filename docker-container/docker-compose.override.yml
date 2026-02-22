@@ -2,3 +2,5 @@ services:
   aibot:
     ports:
       - "5160:5160"
+    environment:
+      - CONFIG_FILE_NAME=unchain-aiaw-dev.json

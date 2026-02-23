@@ -1,1 +1,1 @@
-0 4-19 * * * cd /var/docker-service/unchain-aiaw/app && /var/docker-service/unchain-aiaw/env/bin/python main.py >> /var/log/unchain-aiaw.log 2>&1
+0 4-19 * * * . /etc/environment; cd /var/docker-service/unchain-aiaw/app && /var/docker-service/unchain-aiaw/env/bin/python main.py >> /var/log/unchain-aiaw.log 2>&1

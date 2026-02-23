@@ -30,4 +30,4 @@ RUN touch /var/log/unchain-aiaw.log /var/log/supervisord.log && \
 
 # supervisord設定ファイルを登録
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+CMD ["sh", "-c", "printenv > /etc/environment && /usr/bin/supervisord -n -c /etc/supervisor/conf.d/supervisord.conf"]

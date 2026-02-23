@@ -1,5 +1,3 @@
-name: aibot-service
-
 services:
   aibot:
     restart: always

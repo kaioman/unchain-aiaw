@@ -1,2 +1,2 @@
-☐ ローカル環境でdocker-composeにnameを指定しない(docker-containerフォルダの名前をaibot-serviceに変更する)
-☐ personas.jsonのsourceパス問題の解消（source_image/***で参照できるように）
+✔ ローカル環境でdocker-composeにnameを指定しない(docker-containerフォルダの名前をaibot-serviceに変更する) @done(26-02-23 09:34)
+✔ personas.jsonのsourceパス問題の解消（source_image/***で参照できるように） @done(26-02-23 09:34)

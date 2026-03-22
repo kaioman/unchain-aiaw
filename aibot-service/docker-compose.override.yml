@@ -2,6 +2,8 @@ services:
   aibot:
     ports:
       - "5160:5160"
+    volumes:
+      - ${HOST_KEY_PATH_DEV}:/app/secret/uw_private_key.pem:ro
     environment:
       - CONFIG_FILE_NAME=unchain-aiaw-dev.json.enc
     

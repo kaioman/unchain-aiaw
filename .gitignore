@@ -1,4 +1,6 @@
 .env
+.env.dev
+.env.prod
 env/
 logs/
 unchain-aiaw-dev.json

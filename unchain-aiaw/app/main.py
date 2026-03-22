@@ -10,7 +10,7 @@ from uwxpy.service.generate_prompt_service import GeneratePromptService
 from __init__ import __version__
 
 # アプリ初期化
-app.init_app(__file__, "logger.json", os.environ.get('CONFIG_FILE_NAME', 'unchain-aiaw-dev.json'))
+app.init_app(__file__, "app_config.json", os.environ.get('CONFIG_FILE_NAME', 'unchain-aiaw-dev.json'))
 
 # 起動ログ出力
 app_logger.info(f"Starting unchain-aiaw service... Version: {__version__}")
@@ -37,7 +37,7 @@ aiartworks_client = AIArtworks(
 try:
     # payloadオーバーライド
     payload_override = {
-        "model": GeminiClient.GeminiModel.GEMINI_3_0_PRO_IMAGE_PREVIEW.value,
+        "model": GeminiClient.GeminiModel.GEMINI_2_5_FLASH_IMAGE.value,
         "aspect": GeminiClient.AspectRatio.WIDE.value,
     }
     

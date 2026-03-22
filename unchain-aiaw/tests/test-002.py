@@ -5,14 +5,14 @@ from pycorex.gemini_client import GeminiClient
 from uwxpy.core.aiartworks import AIArtworks
 
 # アプリ初期化
-app.init_app(__file__, "logger.json", os.environ.get('CONFIG_FILE_NAME', 'unchain-aiaw-dev.json'))
+app.init_app(__file__, "app_config.json", os.environ.get('CONFIG_FILE_NAME', 'unchain-aiaw-dev.json'))
 
 # aiartworksインスタンス生成
 aiartworks_client = AIArtworks()
 
 try:
     payload = {
-        "model": GeminiClient.GeminiModel.GEMINI_3_0_PRO_IMAGE_PREVIEW.value,
+        "model": GeminiClient.GeminiModel.GEMINI_2_5_FLASH_IMAGE.value,
         "resolution": GeminiClient.ImageSize.TWO_K.value,
         "aspect": GeminiClient.AspectRatio.SQUARE.value,
         "safety_filter": GeminiClient.HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT.value,

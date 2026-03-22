@@ -10,9 +10,11 @@ services:
       - env_aibot:/var/docker-service/unchain-aiaw/env
       - ../unchain-aiaw:/var/docker-service/unchain-aiaw
       - ../logs:/var/log
+      - ${HOST_KEY_PATH:-~/.ssh/uw_private_key.pem}:/app/secret/uw_private_key.pem:ro
     environment:
       - PROJECT_ROOT=/var/docker-service/unchain-aiaw
       - CONFIG_FILE_NAME=unchain-aiaw.json
+      - WIF_PRIVATE_KEY_PATH=/app/secret/uw_private_key.pem
     networks:
       - docker-container_default
 volumes:

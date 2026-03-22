@@ -3,4 +3,5 @@ services:
     ports:
       - "5160:5160"
     environment:
-      - CONFIG_FILE_NAME=unchain-aiaw-dev.json
+      - CONFIG_FILE_NAME=unchain-aiaw-dev.json.enc
+    

@@ -12,25 +12,5 @@
         "log_rotation_when": "midnight",
         "log_file_encording": "utf-8",
         "log_rotation_utc_time": false
-    },
-    "gcp": {
-        "project_id": "gen-lang-client-0452718754",
-        "secret_name": "DECRYPTION_KEY",
-        "wif_enabled": true,
-        "project_number": "432034677652",
-        "pool_id": "uw-prem-prod-pool",
-        "provider_id": "google-oidc-prod-provider",
-        "service_account_email": "uw-secret-prod@gen-lang-client-0452718754.iam.gserviceaccount.com",
-        "issuer": "https://unchainworks.local",
-        "app_env": "prod",
-        "kid": "wif-key-01",
-        "sts_url": "https://sts.googleapis.com/v1/token",
-        "iam_credentials_url_base": "https://iamcredentials.googleapis.com",
-        "sts_grant_type": "urn:ietf:params:oauth:grant-type:token-exchange",
-        "sts_requested_token_type": "urn:ietf:params:oauth:token-type:access_token",
-        "sts_scope": "https://www.googleapis.com/auth/cloud-platform",
-        "sts_subject_token_type": "urn:ietf:params:oauth:token-type:jwt"
     }
 }
-
-

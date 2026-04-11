@@ -5,5 +5,7 @@ env/
 logs/
 unchain-aiaw-dev.json
 unchain-aiaw.json
+gcp_config-dev.json
+gcp_config-prod.json
 gen_images
 __pycache__

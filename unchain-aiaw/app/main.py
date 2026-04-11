@@ -10,7 +10,12 @@ from uwxpy.service.generate_prompt_service import GeneratePromptService
 from __init__ import __version__
 
 # アプリ初期化
-app.init_app(__file__, "app_config.json", os.environ.get('CONFIG_FILE_NAME', 'unchain-aiaw-dev.json'))
+app.init_app(
+    __file__, 
+    "app_config.json", 
+    os.environ.get('GCP_CONFIG_FILE_NAME', 'gcp_config-dev.json'),
+    os.environ.get('CONFIG_FILE_NAME', 'unchain-aiaw-dev.json.enc')
+)
 
 # 起動ログ出力
 app_logger.info(f"Starting unchain-aiaw service... Version: {__version__}")

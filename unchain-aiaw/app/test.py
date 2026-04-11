@@ -6,7 +6,7 @@ app.init_app(
     __file__, 
     "app_config.json", 
     os.environ.get('GCP_CONFIG_FILE_NAME', 'gcp_config-dev.json'),
-    os.environ.get('CONFIG_FILE_NAME', 'unchain-aiaw-dev.json')
+    os.environ.get('CONFIG_FILE_NAME', 'unchain-aiaw-dev.json.enc')
 )
 
 # 環境変数テスト

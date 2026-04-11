@@ -14,6 +14,7 @@ services:
     environment:
       - PROJECT_ROOT=/var/docker-service/unchain-aiaw
       - CONFIG_FILE_NAME=unchain-aiaw.json
+      - GCP_CONFIG_FILE_NAME=gcp_config-prod.json
       - WIF_PRIVATE_KEY_PATH=/app/secret/uw_private_key.pem
     networks:
       - docker-container_default

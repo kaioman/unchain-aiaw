@@ -1,6 +1,6 @@
 services:
   aibot:
-    restart: no
+    restart: "no"
     build: .
     container_name: py311_unchain_aiaw
     ports:
